@@ -1,0 +1,64 @@
+@import "global";
+
+nav p{
+    font-size: 25px;
+    font-weight: 700;
+    &.logo{
+        display: block;
+    }
+    &.logo-mobile{
+        display: none;
+    }
+}
+
+#hero{
+    padding: 5% 0;
+    .hero-title{
+        padding-top: 40px;
+        margin-bottom: 25px;
+    }
+    .hero-subtitle{
+        margin: 0px;
+    }
+    img{
+        max-width: 100%;
+    }
+}
+#services-contact{
+    .services{
+        text-align: center;
+        p{
+            font-weight: bold;
+        }
+        img{
+            padding-top: 20px;
+            max-width: 100%;
+        }
+    }
+    .contact-form{
+        h1{ text-align: center; }
+        iframe{ max-width: 100%; }
+    }
+}
+
+@media screen and ( max-width: 1600px){
+    #hero .hero-title{
+        padding-top: 0px;
+        margin-top: 0px;
+    }
+}
+
+@media screen and ( max-width: 500px){
+    div.container-fluid{
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+    nav p{
+        &.logo-mobile{ display: block; }
+        &.logo{ display: none; }
+    }
+    #hero .hero-title{
+        font-size: 50px;
+    }
+}
+
