@@ -1,16 +1,134 @@
 @import "global";
 
-nav p{
-    font-size: 25px;
-    font-weight: 700;
-    &.logo{
-        display: block;
+#promotion{
+    background-color: $yellow;
+    color: $black;
+    cursor: pointer;
+}
+nav{
+    p{
+        font-size: 25px;
+        font-weight: 700;
+        &.logo{
+            display: block;
+        }
+        &.logo-mobile{
+            display: none;
+        }
     }
-    &.logo-mobile{
-        display: none;
+    button{
+        float: right;
+        margin-top: 10px;
+    }
+} 
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    .modal-content {
+        background-color: $white;
+        border-radius: 20px;
+        margin: auto;
+        padding: 20px 20px 70px 20px;
+        border: 1px solid #888;
+        width: 80%;
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            &:hover, &:focus{
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+        .modal-title{
+            text-align: center;
+            p{ max-width: 60%; margin: 0 auto; padding-bottom: 6%; }
+        }
+        .pricing-cards{
+            height: auto;
+            .pricing-cards-content{
+                padding-top: 50px;
+                padding-bottom: 60px;
+                border-radius: 20px;
+                text-align: center;
+                @include transition(all, .3s);
+                h3{
+                    padding-bottom: 10px;
+                    margin-top: 0px;
+                }
+                h1{
+                    margin: 10px 0px;
+                    color: $blue;
+                    @include transition(all, .3s);
+                }
+                p{ 
+                    @include transition(all, .3s);
+                    margin: 0px; 
+                    padding: 0px;
+                    color: $blue; 
+                    &:nth-of-type(2){
+                        margin-bottom: 40px;
+                        color: $light-gray !important;
+                    }
+                }
+                a{ margin-top: 20px; @include transition(all, .3s);}
+                
+                &:hover{
+                    @include transition(all, .3s);
+                    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.262);
+                    h1, p{
+                        color: $red;
+                        @include transition(all, .3s);
+                    }
+                    a{
+                        @include transition(all, .3s);
+                        background-color: $red;
+                    }
+                }
+            }
+            &:last-child{
+                .pricing-cards-content{
+                    text-align: left;
+                    padding: 50px 40px;
+                    h2{
+                        font-size: 30px;
+                        margin: 0px;
+                        &:nth-child(2){
+                            color: $blue;
+                            margin-top: 5px;
+                        }
+                    }
+                    p{
+                        padding: 20px 0px 50px 0px;
+                        color: $black;
+                    }
+                    &:hover{
+                        box-shadow: none;
+                        h2:nth-child(2){
+                            color: $yellow;
+                        }
+                        a{
+                            background-color: $yellow;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
-
 #hero{
     padding: 5% 0;
     .hero-title{
@@ -48,7 +166,29 @@ nav p{
     }
 }
 
+@media screen and ( min-width: 1440px){
+    div.pricing-cards .pricing-cards-content{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
+
+@media screen and ( max-width: 900px){
+    div.modal .modal-content .modal-title p{
+        max-width: 100%;
+    }
+    div.modal .modal-content .pricing-cards:last-child{
+        .pricing-cards-content{
+            padding: 50px 0px;
+        }
+    }
+}
+
 @media screen and ( max-width: 500px){
+    .modal .modal-content .container-fluid{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
     div.container-fluid{
         padding-right: 2rem;
         padding-left: 2rem;
@@ -61,4 +201,3 @@ nav p{
         font-size: 50px;
     }
 }
-

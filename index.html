@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,28 @@
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/flexboxgrid.css">
 </head>
+
 <body>
+    <section id="promotion">
+        <div class="container-fluid">
+            <div class="row">
+                <div id="pricing" class="col-md-12">
+                    <p>During this pandemic, we are reducing our prices to help businesess worldwide. Click here to learn more. </p>
+                </div>
+            </div>
+        </div>
+    </section>
     <nav>
         <div class="container-fluid">
-            <p class="logo">The Online Help Team</p>
-            <p class="logo-mobile">theOHT</p>
+            <div class="row">
+                <div class="col-xs col-sm col-lg-4">
+                    <p class="logo">The Online Help Team</p>
+                    <p class="logo-mobile">theOHT</p>
+                </div>
+                <div class="col-xs">
+                    <button id="pricingModal" class="btn nav-btn">Pricing</button>
+                </div>
+            </div>
         </div>
     </nav>
     <section id="hero">
@@ -46,7 +64,8 @@
                             <p>Video Editing</p>
                         </div>
                         <div class="col-md-6">
-                            <img src="assets/imgs/system-development.png" alt="System Development | Database Management">
+                            <img src="assets/imgs/system-development.png"
+                                alt="System Development | Database Management">
                             <p>System Development</p>
                         </div>
                         <div class="col-md-6">
@@ -57,10 +76,91 @@
                 </div>
                 <div class="col-md-6 col-md-offset-1 contact-form">
                     <h1>How can we help?</h1>
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd_SXpTsGtGjUJAdyIUUZz8qLrlpwuPUa4csivTEXCVecb1Ew/viewform?embedded=true" width="740" height="1100" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    <iframe
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSd_SXpTsGtGjUJAdyIUUZz8qLrlpwuPUa4csivTEXCVecb1Ew/viewform?embedded=true"
+                        width="740" height="1100" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                 </div>
             </div>
         </div>
     </section>
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 modal-title">
+                        <h1>Pricing</h1>
+                        <p>We can all agree that going through a pandemic isn’t easy. We hope we can be a helping hand
+                            to businesses.
+                            We have significantly reduced our prices from our most popular services. Check them out!</p>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6 col-lg-4 pricing-cards">
+                                <div class="pricing-cards-content">
+                                    <h3>Web Design & Development</h3>
+                                    <p>starting at</p>
+                                    <h1>$99</h1>
+                                    <p>was $500</p>
+                                    <a href="#" class="btn btn-primary">Get Started</a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-6 col-lg-4 pricing-cards">
+                                <div class="pricing-cards-content">
+                                    <h3>Video Editing</h3>
+                                    <p>starting at</p>
+                                    <h1>$69</h1>
+                                    <p>was $200</p>
+                                    <a href="#" class="btn btn-primary">Get Started</a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-6 col-lg-4 pricing-cards">
+                                <div class="pricing-cards-content">
+                                    <h3>Social Media Marketing</h3>
+                                    <p>starting at</p>
+                                    <h1>$129/mo</h1>
+                                    <p>was $300/mo</p>
+                                    <a href="#" class="btn btn-primary">Get Started</a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-6 col-lg-4 pricing-cards">
+                                <div class="pricing-cards-content">
+                                    <h3>Software Training</h3>
+                                    <p>starting at</p>
+                                    <h1>$5/mo</h1>
+                                    <p>was $20/mo*</p>
+                                    <a href="#" class="btn btn-primary">Get Started</a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-6 col-lg-4 pricing-cards">
+                                <div class="pricing-cards-content">
+                                    <h3>System Development</h3>
+                                    <p>starting at</p>
+                                    <h1>$25/hr</h1>
+                                    <p>was $50/hr</p>
+                                    <a href="#" class="btn btn-primary">Get Started</a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-6 col-lg-4 pricing-cards">
+                                <div class="pricing-cards-content">
+                                    <h2>Don't see what you have in mind?</h2>
+                                    <h2>No Worries.</h2>
+                                    <p>Contact us to get more information about pricing on all of our services.</p>
+                                    <a href="#" class="btn btn-primary">Get in touch</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="assets/index.js"></script>
 </body>
+
 </html>

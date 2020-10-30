@@ -1,11 +1,22 @@
 // colors
+$yellow: #eca400;
+$blue: #007ea7;
 $red: #ff0035;
 $black: #000;
 $white: #fff;
+$light-gray: #9F9F9F;
+
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+  }
 
 // globals
 body{
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
 }
 
 h1{
@@ -22,4 +33,22 @@ h2{
         font-size: 30px;
         font-weight: 400;
     }
+}
+
+.btn{
+    padding: 15px 30px;
+    border-radius: 10px;
+}
+
+.btn-primary{
+    background-color: $blue;
+    color: $white;
+    text-decoration: none;
+}
+
+.nav-btn{
+    background-color: $black;
+    color: $white;
+    border: none;
+    font-size: 16px;
 }
