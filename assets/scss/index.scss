@@ -1,8 +1,8 @@
 @import "global";
 
 #promotion{
-    background-color: $yellow;
-    color: $black;
+    background-color: $blue;
+    color: $white;
     cursor: pointer;
 }
 nav{
@@ -55,7 +55,24 @@ nav{
         }
         .modal-title{
             text-align: center;
+            h2{ font-size: 35px; }
             p{ max-width: 60%; margin: 0 auto; padding-bottom: 6%; }
+        }
+        .questions{
+            padding: 6% 0;
+            .pricing-cards a{
+                color: $black;
+                text-decoration: none;
+                .pricing-cards-content{
+                    padding: 20px 0px;
+                    border-radius: 10px;
+                    h3{ margin: 0px; padding: 0px;}
+                    &:hover{
+                        box-shadow: none;
+                        text-decoration: underline;
+                    }
+                }
+            }
         }
         .pricing-cards{
             height: auto;
@@ -99,7 +116,7 @@ nav{
                     }
                 }
             }
-            &:last-child{
+            &.need-something-else{
                 .pricing-cards-content{
                     text-align: left;
                     padding: 50px 40px;
@@ -126,6 +143,9 @@ nav{
                     }
                 }
             }
+        }
+        .toggle-blocks div{
+            display: none;
         }
     }
 }
