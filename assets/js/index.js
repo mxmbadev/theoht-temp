@@ -15,6 +15,7 @@ $('div.pricing-cards a.trigger-toggle').on('click', function(e){
 // modals
 var modal = document.getElementById("pricingModal");
 var tyModal = document.getElementById("thankYouModal");
+var formModal = document.getElementById("contactModal");
 var btn = document.getElementById("pricing");
 var tyBtn = document.getElementById("thankYou");
 var banner = document.getElementById("pricingBanner");
@@ -27,6 +28,11 @@ btn.onclick = function() {
 tyBtn.onclick = function() {
   tyModal.style.display = "block";
 }
+
+$('a.contact-form').on('click', function(e){
+    contactModal.style.display = "block";
+})
+
 banner.onclick = function() {
   modal.style.display = "block";
 }
@@ -41,5 +47,8 @@ window.onclick = function(event) {
   }
   if (event.target == tyModal) {
     tyModal.style.display = "none";
+  }
+  if (event.target == contactModal) {
+    contactModal.style.display = "none";
   }
 }
